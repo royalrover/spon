@@ -1,0 +1,10 @@
+{
+    "version": "0.0.1",
+    "dependencies": {
+        "fecomponent/mobi-say": {
+          "alias": "fecomponent/say/raw/master/index.js",
+          "requires": [],
+          "labels": "util"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "generator-spon",
+  "version": "0.0.0",
+  "description": "spon generator",
+  "homepage": "",
+  "author": {
+    "name": "yuxiu",
+    "email": "yuxiu@showjoy.com",
+    "url": "http://www.cnblogs.com/accordion/"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/app/index.js",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "q": "^1.4.1",
+    "yeoman-generator": "^0.21.1",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.9.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "yeoman-assert": "^2.0.0",
+    "yeoman-environment": "^1.3.0"
+  },
+  "repository": "https://github.com/royalrover/generator-spon/generator-spon",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT"
+}
