@@ -2,9 +2,16 @@
     "version": "0.0.1",
     "dependencies": {
         "fecomponent/mobi-say": {
-          "alias": "fecomponent/say/raw/master/index.js",
+          "alias": "fecomponent/mobi-say/0.0.1/index",
+          "url": "fecomponent/say/raw/publish/0.0.1/index.js",
           "requires": [],
-          "labels": "util"
+          "labels": ""
+        },
+        "fecomponent/mobi-answer": {
+          "alias": "fecomponent/mobi-answer/0.0.1/index",
+          "url": "fecomponent/answer/raw/publish/0.0.1/index.js",
+          "requires": ["fecomponent/mobi-say/0.0.1/index"],
+          "labels": ""
         }
     }
 }
