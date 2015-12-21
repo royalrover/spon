@@ -1,4 +1,8 @@
 /* generator by mobi */
+
+/* 导入全局方法 */
+@import "../../mixins/mixins.less";
+
 .spon-test {
-	background: red;
+  background: red;
 }

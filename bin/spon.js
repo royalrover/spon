@@ -23,7 +23,7 @@ cli
             }
         });
         if(!flag){
-            npmlog.error('sorry, do not have the command of "'+ cmd +'", please exacute "spon" to find something helpful!');
+            npmlog.error('spon:mobi: ','sorry, do not have the command of "'+ cmd +'", please exacute "spon" to find something helpful!');
             process.exit(1);
         }
     })
@@ -35,7 +35,7 @@ cli
     .action(function(){
         spon.request('spon-env:init',{option: '', plugin: 'env',originOptions: ''})
             .then(function(){
-                cyanLog('exec cmd: "spon init" successfully!');
+                npmlog.info('spon:mobi: ','exec cmd: "spon init" successfully!');
             },spon.fatal);
     });
 
@@ -111,7 +111,7 @@ cli
         // 执行相关请求
         spon.request('spon-mobi:' + cmd,{option: op, plugin: 'mobi',originOptions: options})
             .then(function(){
-                npmlog.info("RET: ",'exec cmd: spon mobi '+ cmd);
+                npmlog.info('spon:mobi: ','exec cmd: spon mobi '+ cmd);
             },spon.fatal);
 
     })
