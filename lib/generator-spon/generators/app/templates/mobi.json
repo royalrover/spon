@@ -1,17 +1,96 @@
 {
-    "version": "0.0.1",
-    "dependencies": {
-        "fecomponent/mobi-say": {
-          "alias": "fecomponent/mobi-say/0.0.1/index",
-          "url": "fecomponent/say/raw/publish/0.0.1/index.js",
-          "requires": [],
-          "labels": ""
+  "version": "0.0.3",
+  "dependencies": {
+    "fecomponent/mobi-raphael": {
+      "alias": "fecomponent/mobi-raphael/0.0.3/index",
+      "url": "fecomponent/raphael/raw/publish/0.0.3/index.js",
+      "requires": [],
+      "labels": ""
+    },
+    "fecomponent/mobi-fastclick": {
+      "alias": "fecomponent/mobi-fastclick/0.0.2/index",
+      "url": "fecomponent/fastclick/raw/publish/0.0.2/index.js",
+      "requires": [],
+      "labels": ""
+    },
+    "fecomponent/mobi-zepto-deferred": {
+      "alias": "fecomponent/mobi-zepto-deferred/0.0.2/index",
+      "url": "fecomponent/zepto-deferred/raw/publish/0.0.2/index.js",
+      "requires": [],
+      "labels": ""
+    },
+    "fecomponent/mobi-zepto-callbacks": {
+      "alias": "fecomponent/mobi-zepto-callbacks/0.0.3/index",
+      "url": "fecomponent/zepto-callbacks/raw/publish/0.0.3/index.js",
+      "requires": [],
+      "labels": ""
+    },
+    "fecomponent/mobi-jswebview": {
+      "alias": "fecomponent/mobi-jswebview/0.0.2/index",
+      "url": "fecomponent/jswebview/raw/publish/0.0.2/index.js",
+      "requires": [
+        {
+          "alias": "fecomponent/mobi-zepto-callbacks/0.0.3/index",
+          "url": "fecomponent/zepto-callbacks/raw/publish/0.0.3/index.js"
         },
-        "fecomponent/mobi-answer": {
-          "alias": "fecomponent/mobi-answer/0.0.1/index",
-          "url": "fecomponent/answer/raw/publish/0.0.1/index.js",
-          "requires": ["fecomponent/mobi-say/0.0.1/index"],
-          "labels": ""
+        {
+          "alias": "fecomponent/mobi-zepto-deferred/0.0.2/index",
+          "url": "fecomponent/zepto-deferred/raw/publish/0.0.2/index.js"
         }
+      ],
+      "labels": ""
+    },
+    "fecomponent/mobi-lazyload": {
+      "alias": "fecomponent/mobi-lazyload/0.0.1/index",
+      "url": "fecomponent/lazyload/raw/publish/0.0.1/index.js",
+      "requires": [],
+      "labels": ""
+    },
+    "fecomponent/mobi-hammer": {
+      "alias": "fecomponent/mobi-hammer/0.0.1/index",
+      "url": "fecomponent/hammer/raw/publish/0.0.1/index.js",
+      "requires": [],
+      "labels": ""
+    },
+    "fecomponent/mobi-chart": {
+      "alias": "fecomponent/mobi-chart/0.0.1/index",
+      "url": "fecomponent/chart/raw/publish/0.0.1/index.js",
+      "requires": [],
+      "labels": ""
+    },
+    "fecomponent/mobi-art-template": {
+      "alias": "fecomponent/mobi-art-template/0.0.2/index",
+      "url": "fecomponent/art-template/raw/publish/0.0.2/index.js",
+      "requires": [],
+      "labels": ""
+    },
+    "fecomponent/mobi-say": {
+      "alias": "fecomponent/mobi-say/0.0.12/index",
+      "url": "fecomponent/say/raw/publish/0.0.12/index.js",
+      "requires": [],
+      "labels": ""
+    },
+    "fecomponent/mobi-answer": {
+      "alias": "fecomponent/mobi-answer/0.0.3/index",
+      "url": "fecomponent/answer/raw/publish/0.0.3/index.js",
+      "requires": [
+        {
+          "alias": "fecomponent/mobi-say/0.0.12/index",
+          "url": "fecomponent/say/raw/publish/0.0.12/index.js"
+        }
+      ],
+      "labels": ""
+    },
+    "fecomponent/mobi-learn": {
+      "alias": "fecomponent/mobi-learn/0.0.2/index",
+      "url": "fecomponent/learn/raw/publish/0.0.2/index.js",
+      "requires": [
+        {
+          "alias": "fecomponent/mobi-answer/0.0.3/index",
+          "url": "fecomponent/answer/raw/publish/0.0.3/index.js"
+        }
+      ],
+      "labels": ""
     }
+  }
 }

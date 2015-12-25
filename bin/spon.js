@@ -15,7 +15,7 @@ cli
     .version(appInfo.version)
     .usage('欢迎使用showjoy前端解决方案－spon <cmd> [subcmd]')
     .action(function(cmd){
-        var cmds = ['init','mobi','mb'];
+        var cmds = ['init','upgrade','mobi','mb'];
         var flag = false;
         cmds.forEach(function(c){
             if(c == cmd){
@@ -38,7 +38,6 @@ cli
                 npmlog.info('spon:mobi: ','exec cmd: "spon init" successfully!');
             },spon.fatal);
     });
-
 
 cli
     .command('mobi [cmd]')

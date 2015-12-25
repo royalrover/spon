@@ -1,10 +1,10 @@
 {
   "name": "spon",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "showjoy移动前端模块化解决方案",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaywcjlove/wcj.git"
+    "url": "https://github.com/royalrover/spon.git"
   },
   "main": "index.js",
   "bin": {
@@ -12,9 +12,9 @@
   },
   "keywords": [
     "spon",
-    "components"
+    "component"
   ],
-  "author": "yuxiu <yuxiu@showjoy.com> ",
+  "author": "yuxiu <tanchengyl@126.com> ",
   "license": "MIT",
   "dependencies": {
     "async": "^1.5.0",
