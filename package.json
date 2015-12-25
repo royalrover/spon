@@ -1,6 +1,6 @@
 {
   "name": "spon",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "showjoy移动前端模块化解决方案",
   "repository": {
     "type": "git",
@@ -33,6 +33,8 @@
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-webpack": "^1.5.0",
+    "gulp-jshint": "^2.0.0",
+    "jshint": "^2.8.0",
     "imports-loader": "^0.6.5",
     "less-loader": "^2.2.2",
     "lodash": "2.4.1",
