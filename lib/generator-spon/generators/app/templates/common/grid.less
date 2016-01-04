@@ -1,0 +1,40 @@
+.grid {
+  & {
+    box-sizing: content-box;
+  }
+  &:before, &:after {
+    content: " ";
+    display: table
+  }
+  &:after {
+    clear: both
+  }
+  .col {
+    float: left;
+  }
+  &.col-1 {
+    .col {
+      width: 100/1%;
+    }
+  }
+  &.col-2 {
+    .col {
+      width: 100/2%;
+    }
+  }
+  &.col-3 {
+    .col {
+      width: 100/3%;
+    }
+  }
+  &.col-4 {
+    .col {
+      width: 100/4%;
+    }
+  }
+  &.col-5 {
+    .col {
+      width: 100/5%;
+    }
+  }
+}

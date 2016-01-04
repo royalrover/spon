@@ -1,0 +1,89 @@
+/*
+ * 欢迎banner 浮层样式
+ * @author xiaochen@showjoy.com
+ */
+.welcome-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: auto;
+
+  z-index: 99999;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+
+  width: 100%;
+  text-align: center; 
+
+  .close-btn{
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    //    top: -15px;
+    //    right: -10px;
+    //    background: url(http://cdn1.showjoy.com/images/24/24da1ddd82464098a35a5e6ceb4fb92f.png) no-repeat 0 0;
+    top: 5px;
+    right: 3px;
+    width: 100px;
+    height: 36px;
+    z-index: 999999;
+    background:url(about:blank);
+  }
+  .welcome-content {
+    width: 300px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform: translateY(-150%) rotateX(90deg);
+    -ms-transform: translateY(-150%) rotateX(90deg);
+    transform: translateY(-150%) rotateX(90deg);
+
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    opacity: 0;
+  }
+}
+
+// IE8及以下浏览器不支持:root
+:root .welcome-modal {
+  margin: 0;
+}
+
+.welcome-modal-show {
+  visibility: visible;
+  .welcome-content {
+    -webkit-transform: translateY(0%) rotateX(0deg);
+    -ms-transform: translateY(0%) rotateX(0deg);
+    transform: translateY(0%) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.welcome-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  background-color: #000;
+  transition: all 0.3s;
+}
+
+.welcome-overlay-show {
+  visibility: visible;
+  opacity: .8;
+}

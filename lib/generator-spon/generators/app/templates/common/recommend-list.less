@@ -1,0 +1,54 @@
+/*
+ * 商品推荐 列表公共样式
+ * @author xiaochen@yunjee.com
+ */
+
+// 导入全局方法
+@import "../mixins.less";
+.recommend-list() {
+    .clearfix();
+    margin: 0 13px 13px 0;
+    .recommend-item {
+        width: 50%;
+        float: left;
+        display: inline;
+        a {
+          border: 1px solid #e2e3e8;
+          margin: 10px 0 0 13px;
+          height: 170px;
+          line-height: 17px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          background: #fff;
+          display: block;
+        }
+        .pic {
+            .square(130px);
+            display: block;
+            margin: 0 auto;
+        }
+        .title {
+            .text-overflow();
+            color: #4c3756;
+            font-size: 12px;
+            font-size: 1.2rem * 0.6;
+            padding: 0 6px;
+        }
+        .amount {
+            padding: 0 6px;
+            .highlight {
+                color: #d10000;
+                font-size: 14px;
+                font-size: 1.4rem * 0.6;
+                margin: 0 3px 0 -3px;
+            }
+            .discount {
+                color: #c3c3c3;
+                font-size: 12px;
+                font-size: 1.2rem * 0.6;
+                margin-right: 3px;
+            }
+        }
+    }
+}

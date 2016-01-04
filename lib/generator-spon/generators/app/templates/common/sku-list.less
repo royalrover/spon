@@ -1,0 +1,70 @@
+/*
+ * 团购、易信兑换 列表公共样式
+ * @author xiaochen@yunjee.com
+ */
+
+// 导入全局方法
+@import "../mixins.less";
+
+.item-list{
+  padding: 5px 10px 0;
+  overflow: hidden;
+  .item{
+    .clearfix();
+    padding: 10px 10px 0 0;
+    border-bottom: 1px solid #c8c8c8;
+    &:last-child{
+      .detail{
+        border-bottom: 0;
+      }
+    }
+    .pic{
+      .square(110px);
+      margin-right: 8px;
+      border: 1px solid #e2e3e8;
+      float: left;
+    }
+    .detail{
+      height: 120px;
+      min-width: 300px;
+      .title{
+        color: #4c3756;
+        font-size: 12px;
+        padding-top: 7px;
+        .text-overflow();
+      }
+      .price{
+        color: #949494;
+        font-size: 12px;
+        margin-top: 5px;
+        .highlight{
+          font-size: 18px;
+          margin: 0 3px 0 -3px;
+        }
+        .discount{
+          color: #c3c3c3;
+          font-size: 12px;
+          margin-right: 3px;
+        }
+      }
+      .buy-num{
+        color: #6b6b6b;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+      .buy-btn{
+        display: block;
+        .size(110px,36px);
+        background: #cf0914;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        line-height: 36px;
+        margin: 5px 0 0 118px;
+      }
+    }
+  }
+}
+.highlight{
+  color: #d10000;
+}
