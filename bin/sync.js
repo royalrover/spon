@@ -8,5 +8,5 @@ var currentWebpack = path.join(current,'lib/generator-spon/generators/app/templa
 var gulpfilePath = '/usr/local/lib/node_modules/spon/lib/generator-spon/generators/app/templates/gulpfile.js';
 var webpackpath = '/Users/showjoy/.spon/mobi/webpack.config.js';
 
-shelljs.exec('cp '+ currentGulpfile +' '+gulpfilePath);
-shelljs.exec('cp '+ currentWebpack + ' ' +webpackpath);
+shelljs.exec('sudo cp '+ currentGulpfile +' '+gulpfilePath);
+shelljs.exec('sudo cp '+ currentWebpack + ' ' +webpackpath);
