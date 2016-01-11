@@ -15,7 +15,7 @@ cli
     .version(appInfo.version)
     .usage('欢迎使用showjoy前端解决方案－spon <cmd> [subcmd]')
     .action(function(cmd){
-        var cmds = ['init','upgrade','mobi','mb'];
+        var cmds = ['init','mobi','mb','pc'];
         var flag = false;
         cmds.forEach(function(c){
             if(c == cmd){
@@ -38,6 +38,27 @@ cli
                 npmlog.info('spon:mobi: ','exec cmd: "spon init" successfully!');
             },spon.fatal);
     });
+
+cli
+  .command('pc [cmd]')
+  .option("-o, --online [type]", "发布至线上环境")
+  .action(function(cmd,options){
+      var op;
+      switch(cmd){
+          case 'publish':
+              op = options.online ? 'online' : 'dev';
+              break;
+          default:
+              break;
+      }
+
+
+      // 执行相关请求
+      spon.request('spon-pc:' + cmd,{option: op, plugin: 'pc',originOptions: options})
+        .then(function(){
+            npmlog.info('spon:pc: ','exec cmd: spon pc '+ cmd);
+        },spon.fatal);
+  });
 
 cli
     .command('mobi [cmd]')
