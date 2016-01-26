@@ -2,6 +2,8 @@
 var cli = require('commander');
 var appInfo = require('../package.json');
 var spon = require('../lib/spon-manager');
+var utils = require('../lib/utils');
+
 var chalk = require('chalk');
 var npmlog = require('npmlog');
 
@@ -127,11 +129,10 @@ cli
                 break;
         }
 
-
         // 执行相关请求
-        spon.request('spon-mobi:' + cmd,{option: op, plugin: 'mobi',originOptions: options})
+        spon.request('spon-mobi:' + cmd,{option: op, plugin: 'mobi',originOptions: options,spon: spon,utils: utils})
             .then(function(){
-                npmlog.info('spon:mobi: ','exec cmd: spon mobi '+ cmd);
+                npmlog.info('spon:mobi:','exec cmd: spon mobi '+ cmd);
             },spon.fatal);
 
     })

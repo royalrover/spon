@@ -10,3 +10,4 @@ var webpackpath = '/Users/showjoy/.spon/mobi/webpack.config.js';
 
 shelljs.exec('sudo cp '+ currentGulpfile +' '+gulpfilePath);
 shelljs.exec('sudo cp '+ currentWebpack + ' ' +webpackpath);
+shelljs.exec('sudo cp -r lib /usr/local/lib/node_modules/spon/');
