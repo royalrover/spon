@@ -41,6 +41,7 @@
     "my-gulp-webpack": "^0.0.1",
     "my-webpack": "^0.0.1",
     "npmlog": "0.0.6",
+    "postcss": "^5.0.14",
     "q": "1.4.1",
     "request": "^2.67.0",
     "shelljs": "^0.5.3",

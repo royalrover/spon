@@ -72,6 +72,9 @@ cli
     .option("-p,--port [type]", "设置本地服务器端口")
     .option("-l,--livereload [type]","设置reload端口")
     .option("-o,--online","发布至线上环境")
+    .option("-n,--name [type]","针对具体的页面使用rem规范")
+    .option("-b,--blacklist [type]","rem规范的黑名单机制")
+    .option("-w,--whitelist [type]","rem规范的白名单机制")
     .action(function(cmd, options){
         if(!cmd){
             log();
@@ -132,7 +135,7 @@ cli
         // 执行相关请求
         spon.request('spon-mobi:' + cmd,{option: op, plugin: 'mobi',originOptions: options,spon: spon,utils: utils})
             .then(function(){
-                npmlog.info('spon:mobi:','exec cmd: spon mobi '+ cmd);
+                npmlog.info('spon:mobi:','exec cmd: spon mobi '+ cmd + ' successfully');
             },spon.fatal);
 
     })
