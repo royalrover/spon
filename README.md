@@ -96,12 +96,96 @@ $('main').html(tmpl({
   titleDesc: 'nothing to say!'
 }));
 ```
+### 10. spon集成showjoy-assets/portal的发布功能
+#### 简介： spon在0.1.6版本提供了portal的发布功能，命令如下：
+`spon pc publish (-o)` 对应 `发布至测试（线上）`
+
+### 11. 本地营销页面spon工程
+#### 营销页面目前没有统一的远程仓库地址，在本地执行`spon mb init`命令创建工程时会出现错误。正确方式是先去自己的gitlab创建一个仓库，再讲仓库`clone`下来。本地进入这个仓库就可执行`spon mb init`命令创建工程。
+
+### 12. rem布局规范
+#### 0.1.10版本的spon添加了rem插件，该插件作用可以让rem的大小自适应。rem插件必须与flexible.js文件匹配（http://cdn1.showjoy.com/assets/f2e/joyf2e/vendor/0.0.6/flexible/flexible-min.js），目前公司使用的flexible是将设计稿插件针对的750px的设计稿，因此，在设计稿上一个banner的宽度是750px，可以在less中这样定义：
+`
+.banner{
+  width: 750px;
+  font-size: 16px;
+}
+`
+这样，使用spon mb rem之后，会计算成
+`
+.banner{
+  width: 10rem;
+  font-size: 16px;
+}
+`
+当然，现实情况中不回有这么简单的情况，举个例子：
+设计师往往给我们视觉稿中有1px的边框要求，如果还是简单的采用rem放缩，那么肯定最终在终端的呈现效果很有可能不是1px。那么，如何避免呢？有些同学可能有了解决方案，如高分屏下设置0.5px，或者使用tramsform进行scale缩小，但这都是基于px为前提的。因此我们需要针对某些属性放弃使用rem变换，当然也有可能需要我们手动添加某些属性使用rem变换，这取决于项目的具体需求。
+目前，spon工具默认针对以下css属性做rem判断：
+
+'font','font-size','line-height', 'letter-spacing','text-indent','word-spacing','width','height','max-height','max-width','min-height','min-width','left','top','right','bottom','margin','margin-left','margin-top','margin-right','margin-bottom','padding','padding-left','padding-top','padding-right','padding-bottom','background','background-position',
+'vertical-align'
+
+如果想针对某个属性放弃使用rem变换，spon已实现黑名单机制，我们可以使用`spon mb rem -b 'height border font-size line-height'`命令，“height，border，font-size，line-height”几个属性就不会进行rem变换；
+同理，如果有些css属性需要进行rem变换，但是spon默认并未针对该属性做rem变换，需要我们手动将这些属性加入白名单中，如`spon mb rem -w "margin padding-top"`；
+#### 另外，spon工程可能会有多个页面，而每个页面可能由于历史遗留问题并未采用rem布局，为了避免不可预知的变换问题，因此十分建议`在page工程中，只针对单一工程进行rem变换`，正如下面命令：
+`spon mb rem -n 'abc'`,只针对abc页面的相关less做变换，安全有效。
+最后，对于如下的css样式：
+
+.abc {
+  width: 750px;
+  font-size: 16px;
+  line-height: 16px;
+  height: 50px;
+  border: 1px solid red;
+  margin: 10px 5px 5px 10px;
+  padding-top: 20px;
+}
+
+使用` spon mb rem -n art-tmpl -w "margin padding-top" -b 'height border font-size line-height' `,就可以按照自定义设置完成转换，转换后的结果如下：
+
+.abc {
+  width: 10rem;
+  font-size: 16px;
+  line-height: 16px;
+  height: 50px;
+  border: 1px solid red;
+  margin: 0.1333rem 0.0667rem 0.0667rem 0.1333rem;
+  padding-top: 0.2667rem;
+}
+
+最后的最后哦，在使用rem插件时，每当我们执行spon mb rem后会有交互，在此确认可能的后果，以免造成不必要的损失！！！！
 
 # CHANGELOG
 
 - v0.1.3
   添加了版本号引用组件；
-  可创建ui组件，并相对路径引用模块
+  
 
 - v0.1.4
   增加模版渲染引擎，针对src/pages下的所有`.tmpl`文件进行预编译
+  可创建ui组件，并相对路径引用模块
+
+- v0.1.5
+  针对src下的less文件进行watcher，方便开发时调试样式
+
+- v0.1.6
+  针对尚未重构的showjoy-assets/portal 工程添加发布功能
+
+- v0.1.7
+  针对pages工程，添加了src/components中的模块引用线上组件的功能
+  内部实现了线上组件缓存功能
+
+- v0.1.8
+  针对fecomponent组件中的less，可以循环引用，即less中可通过@import递归加载
+
+- v0.1.9
+  完成部分重构，集成rem插件（待修改，做过渡使用，建议不要采用该版本的rem插件）
+
+- v0.1.10
+  丰富了rem插件，集成许多复杂功能
+
+- v0.1.11
+  修改了rem插件的小问题，并完美适配当前前端切图规范（在使用rem插件时，必须修改引用的flexibal.js，使用新的布局脚本）
+
+- v0.1.12
+  bug修复，task顺序重新调整

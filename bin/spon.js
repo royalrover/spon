@@ -2,7 +2,6 @@
 var cli = require('commander');
 var appInfo = require('../package.json');
 var spon = require('../lib/spon-manager');
-var utils = require('../lib/utils');
 
 var chalk = require('chalk');
 var npmlog = require('npmlog');
