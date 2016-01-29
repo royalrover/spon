@@ -155,6 +155,15 @@ $('main').html(tmpl({
 
 最后的最后哦，在使用rem插件时，每当我们执行spon mb rem后会有交互，在此确认可能的后果，以免造成不必要的损失！！！！
 
+### 13. pc端工具链打通
+#### 命令一览：
+####   spon pc init (-c);
+####   spon pc add;
+####   spon pc build
+####   spon pc dev -p 8888 -l 12334;
+####   spon pc publish (-o);
+####   spon pc upgrade;
+
 # CHANGELOG
 
 - v0.1.3
@@ -187,5 +196,11 @@ $('main').html(tmpl({
 - v0.1.11
   修改了rem插件的小问题，并完美适配当前前端切图规范（在使用rem插件时，必须修改引用的flexibal.js，使用新的布局脚本）
 
-- v0.1.12
+- v0.1.12（不要使用该版本，作为过渡）
   bug修复，task顺序重新调整
+
+- v0.1.13
+  bug修复
+
+- v0.1.14
+  pc端工具链打通，针对pc端的操作和mobile端对应

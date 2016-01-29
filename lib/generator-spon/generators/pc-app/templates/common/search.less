@@ -1,0 +1,50 @@
+/*
+ * widget - search
+ * @author xiaochen@showjoy.com
+ */
+@import '../mixins';
+.widget-search{
+  height: 31px;
+  .search-input{
+    width: 160px;
+    font-size: 12px;
+    padding: 0 15px;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #ededed;
+    border: 0;
+  }
+  input::-webkit-input-placeholder {
+    color: #ccc;
+  }
+  input:-moz-placeholder {
+    color: #ccc;
+  }
+  input:-ms-input-placeholder {
+    color: #ccc;
+  }
+  .text-empty{
+    input::-webkit-input-placeholder {
+      color: #cecece;
+    }
+    input:-moz-placeholder {
+      color: #cecece;
+    }
+    input:-ms-input-placeholder {
+      color: #cecece;
+    }
+  }
+  .search-btn{
+    width: 40px;
+    height: 35px;
+    background-image: url('http://cdn1.showjoy.com/images/fb/fb1a00da74d0458abbb87277e22f4619.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    .inline-block();
+    vertical-align: middle;
+    overflow: hidden;
+    font-size: 0;
+  }
+}

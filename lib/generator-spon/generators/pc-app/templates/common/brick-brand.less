@@ -1,0 +1,49 @@
+/*
+ * widget - brick - brand
+ * @author ben@yunjee.com
+ */
+
+@import "brick";
+
+.widget-brick-brand:extend(.widget-brick all){
+  float: left;
+  .brick-cover{
+    width: 220px;
+    height: 160px;
+    background-color: #fff;
+    margin-left: 20px;
+    position: relative;
+    &:hover {
+      .hover-border{
+        display: block;
+        cursor: pointer;
+      }
+    }
+    .hover-border{
+      display: none;
+      width: 100%;
+      height: 100%;
+      border: 3px solid #ccc;
+      *border: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+    }
+    .brick-cover-wrap{
+      height: 120px;
+      .brick-pic{
+        height: 120px;
+      }
+    }
+    .brick-text-wrap{
+      padding: 0 14px;
+    }
+    .brick-title{
+      height: 39px;
+      line-height: 39px;
+      border-top: 1px solid #e8e8e8;
+      background-color: transparent;
+    }
+  }
+}

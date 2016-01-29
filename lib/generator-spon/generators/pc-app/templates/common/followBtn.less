@@ -1,0 +1,55 @@
+/*
+ * widget - followbtn
+ * @author ben@yunjee.com
+ */
+@import '../mixins';
+
+.widget-followbtn{
+  font-size: @font-size-small;
+  display: block;
+  width: 92px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #f39734;
+  border-radius: 2px;
+  color: #fff;
+  .favored-status{
+    display: none;
+    width: 92px;
+    height: 25px;
+    background-color: #cccccc;
+    text-align: center;
+  }
+  .normal-status{
+    display: block;
+  }
+  .favor-icon{
+    vertical-align: middle;
+    background: transparent url("http://cdn1.showjoy.com/assets/img/3.0/icon/icon.png") no-repeat -5px -108px;
+    .size(11px, 10px);
+    .inline-block();
+    margin:0 15px;
+  }
+  .text{
+    vertical-align: middle;
+  }
+}
+
+.widget-followbtn-s:extend(.widget-followbtn all){
+  width: 65px;
+  .favor-icon{
+    margin:0 5px 0 0;
+  }
+  .favored-status{
+    width: 65px;
+  }
+}
+
+.ui-acon-is{
+  .normal-status{
+    display: none;
+  }
+  .favored-status{
+    display: block;
+  }
+}

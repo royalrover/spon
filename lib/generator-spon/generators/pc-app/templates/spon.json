@@ -1,0 +1,13 @@
+{
+  "name": "Hunban",
+  "group": "showjoy",
+  "version": "@BRANCH@",
+  "type": "pc",
+  "csstype": "less",
+  "options": {
+    "livereloadPort": 29909,
+    "port": 8009,
+    "repo": "",
+    "builderReflect": true
+  }
+}

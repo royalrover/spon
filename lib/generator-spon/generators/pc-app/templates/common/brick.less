@@ -1,0 +1,72 @@
+/*
+ * widget - brick
+ * @author ben@yunjee.com
+ */
+@import '../mixins';
+.widget-brick{
+  overflow: hidden;
+  margin-bottom: 20px;
+  a:hover{
+    text-decoration: none;
+  }
+  .brick-arr{
+    .arr-up-bottom(#e5e5e5, 10px, 10px);
+    display: none;
+  }
+  .brick-cover{
+    height: 220px;
+    #translucent > .noie-background(#fff, 0.05);
+    #translucent > .ie-background("http://cdn1.showjoy.com/images/00/00dcda5b235e4c64a786b3462bc29eaa.png");
+    // @media screen and (min-width:1200px){
+    //   width: 280px;
+    //   &:hover{
+    //     border:2px solid #7e7084;
+    //   }
+    // }
+    .brick-cover-wrap{
+       position: relative;
+       height: 190px;
+    }
+    .brick-pic{
+      display: block;
+      .size(100%, 190px);
+      text-align: center;
+    }
+    .brick-title{
+      position: relative;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      padding: 0 20px;
+      .text-overflow();
+      background-color: #e5e5e5;
+    }
+    .brick-other{
+      height: 30px;
+      padding: 0 20px;
+      background-color: #e5e5e5;
+    }
+  }
+  .brick-drop{
+    background-color: #e6e6e6;
+    position: relative;
+    *zoom:1;
+    display: none;
+  }
+}
+
+.brick-hover{
+  z-index:3!important;
+  height: auto;
+  .brick-arr{
+    display: block;
+  }
+  .brick-cover{
+    .brick-title{
+      line-height: 40px;
+    }
+    .brick-other{
+      .opacity(1);
+    }
+  }
+}

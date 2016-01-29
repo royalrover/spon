@@ -1,0 +1,66 @@
+/*
+ * widget - dialog - form
+ * @author xiaochen@showjoy.com
+ */
+@import "../mixins";
+
+.widget-dialog-form{
+  text-align: center;
+  padding: 25px 25px 40px;
+  .title{
+    font-size: 24px;
+    vertical-align: middle;
+  }
+  .subtitle{
+    font-size: 18px;
+    color: #666;
+    margin-top: 15px;
+  }
+  .ipt-area{
+    .clearfix();
+    margin-top: 25px;
+    padding-top: 40px;
+    border-top: 1px dashed #c4c2c5;
+  }
+  .tip-area{
+    .ipt-area;
+    padding: 68px 0 58px;
+    .tip-text{
+      font-size: 18px;
+      color: #666;
+    }
+  }
+  dl{
+    margin: 0 auto;
+    .clearfix();
+    dt{
+      float: left;
+      font-size: 18px;
+      color: #666;
+      line-height: 30px;
+    }
+    dd{
+      float: left;
+      margin: 0 0 10px 10px;
+      .msg-error{
+        color: #c00;
+        text-align: left;
+        line-height: 30px;
+      }
+    }
+  }
+  input[type="text"],
+  input[type="password"]{
+    width: 178px;
+    height: 28px;
+    line-height: 28px\9;
+    padding: 0;
+  }
+  .action{
+    .action-ok{
+      .regular-button(160px,40px,#000,#fff);
+      margin: 10px auto;
+      font-size: 18px;
+    }
+  }
+}

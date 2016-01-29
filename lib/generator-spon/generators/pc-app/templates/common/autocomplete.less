@@ -1,0 +1,53 @@
+/*
+ * UI - autocomplete
+ * @author ben@yunjee.com
+ */
+@import '../mixins';
+.ui-autocomplete{
+  position: absolute;
+  border: 1px solid #dddddd;
+  display: block; 
+  .ui-autocomplete-item{
+    .ui-autocomplete-item-pic{
+      .inline-block();
+      margin: 10px 10px 10px 0;
+      vertical-align: middle;
+    }
+    a{
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+      color: #999;
+      line-height: 30px;
+      padding: 0 10px;
+      min-height: 0; /* support: IE7 */
+      em{
+        font-style: normal;
+        text-decoration: underline;
+      }
+    }
+    a.ui-state-active,
+    a.ui-state-focus{
+      background-color: #ab8fa5;
+      color: #fff;
+    }
+  }
+  .ui-autocomplete-category {
+    background-color: #f5f5f5;
+    color: #999;
+    font-size: @font-size-base;
+    padding: 0 10px;
+    line-height: 22px;
+    height: 22px;
+    position: relative;
+    a.ui-autocomplote-more{
+      position: absolute;
+      top:0;
+      right: 10px;
+      font-size: @font-size-small;
+      color: #9a9a9a;
+    } 
+  }
+}
+
+

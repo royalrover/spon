@@ -41,24 +41,76 @@ cli
     });
 
 cli
+  .command('upgrade')
+  .description('更新组件配置文件')
+  .action(function(){
+      spon.request('spon-mobi:upgrade',{option: '', plugin: 'upgrade',originOptions: ''})
+        .then(function(){
+            npmlog.info('spon: ','exec cmd: "spon upgrade" successfully!');
+        },spon.fatal);
+  });
+
+cli
   .command('pc [cmd]')
+  .description('传统前端开发方案')
   .option("-o, --online [type]", "发布至线上环境")
+  .option("-c, --component [type]", "初始化模块工程")
+  .option("--page [type]", "初始化页面工程,默认操作")
+  .option("-p,--port [type]", "设置本地服务器端口")
+  .option("-l,--livereload [type]","设置reload端口")
   .action(function(cmd,options){
+      // 由于pc端和mobile端的开发规范相同，因此大多数情况下
+      // 命令可以共用
       var op;
       switch(cmd){
+          case 'init':
+              var op = options.page ? 'page' :
+                options.component ? 'component' :
+                    'page';
+              if(options.component){
+                  spon.request('spon-mobi:' + cmd,{option: op, plugin: 'pc',originOptions: options,spon: spon,utils: utils})
+                    .then(function(){
+                        npmlog.info('spon:pc:','exec cmd: spon pc '+ cmd + ' successfully');
+                    },spon.fatal);
+              }else{
+                  spon.request('spon-pc:' + cmd,{option: op, plugin: 'pc',originOptions: options})
+                    .then(function(){
+                        npmlog.info('spon:pc: ','exec cmd: spon pc '+ cmd);
+                    },spon.fatal);
+              }
+
+              break;
+          // pc端模块复用mobi插件
+          case 'add':
+          case 'build':
+          case 'dev':
+          case 'upgrade':
+          case 'publish':
+              if(cmd == 'add'){
+                  op = 'page';
+              }else if(cmd == 'publish'){
+                  op = options.online ? 'online' : 'dev';
+              }
+              spon.request('spon-mobi:' + cmd,{option: op, plugin: 'pc',originOptions: options,spon: spon,utils: utils})
+                .then(function(){
+                    npmlog.info('spon:pc:','exec cmd: spon pc '+ cmd + ' successfully');
+                },spon.fatal);
+              break;
+          /*// 针对未拆分的portal工程，做简单的发布使用
           case 'publish':
               op = options.online ? 'online' : 'dev';
+              // 执行相关请求
+              spon.request('spon-pc:' + cmd,{option: op, plugin: 'pc',originOptions: options})
+                .then(function(){
+                    npmlog.info('spon:pc: ','exec cmd: spon pc '+ cmd);
+                },spon.fatal);
               break;
+          */
           default:
               break;
       }
 
 
-      // 执行相关请求
-      spon.request('spon-pc:' + cmd,{option: op, plugin: 'pc',originOptions: options})
-        .then(function(){
-            npmlog.info('spon:pc: ','exec cmd: spon pc '+ cmd);
-        },spon.fatal);
   });
 
 cli

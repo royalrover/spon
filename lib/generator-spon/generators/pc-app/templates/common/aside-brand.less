@@ -1,0 +1,55 @@
+/*
+ * widget-aside-brand
+ * 侧栏品牌列表
+ * @author ben@yunjee.com
+ */
+@import '../mixins';
+.widget-aside-brand{
+  width: 280px;
+  background-color: #f3f3f3;
+  .aside-brand-hd{
+    height: 59px;
+    padding: 0 30px;
+    text-align: center;
+    line-height: 59px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    .aside-brand-hd-text{
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+  .aside-brand-bd{
+    width: 282px;
+    .aside-brand-list{
+      padding-bottom: 14px;
+      .aside-brand{
+        height: 160px;
+        width: 220px;
+        background-color: #fff;
+        margin: 0 auto 20px;
+        .aside-brand-logo{
+          text-align: center;
+          .aside-brand-logo-pic{
+            margin: 0 5px;
+          }
+        }
+        .aside-brand-name{
+          height: 30px;
+          line-height: 30px;
+          color: #333;
+          font-size: 12px;
+          text-align: center;
+          letter-spacing: 1px;
+          padding: 0 14px;
+          .aside-brand-name-text{
+            border-top: 1px solid #e8e8e8;
+          }
+          .aside-brand-name-space{
+            .inline-block();
+            margin: 0 6px;
+          }
+        }
+      }
+    }
+  }
+}

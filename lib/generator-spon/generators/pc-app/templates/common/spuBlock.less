@@ -1,0 +1,88 @@
+/*
+ * widget - spublock
+ * @author ben@yunjee.com
+ */
+@import '../mixins';
+.widget-spublock{
+  background-color: #fafafa;
+  .spu-block-bd{
+    width: 100%;
+    height: 190px;
+    position: relative;
+    .spu-pic{
+      position: absolute;
+      top: 0;
+      left: 110px;
+    }
+    .brand-pic{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .buy-btn{
+      position: absolute;
+      top: 100px;
+      left: 25px;
+      background: url("http://cdn1.showjoy.com/assets/img/4.0/btn/btn-gobuy.png") no-repeat 0 0;
+      .size(108px, 40px);
+    }
+  }
+  .spu-block-ft{
+    width: 100%;
+    overflow: hidden;
+    .spu-title{
+      color:#fff;
+      a{
+        color: #fff;
+      }
+      a:hover{
+        text-decoration: underline;
+      }
+      height: 40px;
+      width: 100%;
+      .text-overflow();
+      font-size: 14px;
+      line-height: 40px;
+      text-align: center;
+      background-color: #9e93a4;
+    }
+    .sku-list{
+      padding: 0 10px;
+      li.sku{
+        width: 100%;
+        height: 70px;
+        overflow: hidden;
+        border-bottom: 1px dashed #c8c8c8;
+        .pic{
+          float: left;
+          margin-top: 5px;
+        }
+        .volume{
+          float: left;
+          font-size: @font-size-base;
+          color: #666;
+          margin-right: 20px;
+          line-height: 70px;
+        }
+        .price{
+          float: left;
+          line-height: 70px;
+          color: #cc0000;
+          font-size: @font-size-base;
+          .int{
+            font-size: 22px;
+          }
+        }
+        .buy-btn{
+          float: right;
+          margin-top: 20px;
+          .size(80px, 34px);
+          background: url("http://cdn1.showjoy.com/images/7a/7af5ac30a4bf4fdd865ace8bf243fee8.png") no-repeat 0 0;
+        }
+      }
+      li.sku:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+}

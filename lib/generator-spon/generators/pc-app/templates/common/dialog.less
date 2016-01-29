@@ -1,0 +1,58 @@
+/*
+ * widget - dialog
+ * @author xiaochen@showjoy.com
+ */
+@import '../mixins';
+.widget-dialog{
+  padding: 0 26px;
+  .dialog-hd{
+    font-size: 24px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    border-bottom: 1px dotted #c4c2c5;
+  }
+  .dialog-bd{
+    padding: 37px 0 50px;
+    .msg{
+      text-align: center;
+      font-size: 18px;
+      color: #666;
+    }
+    .dialog-list{
+      margin-top: 30px;
+      dl.list-item{
+        height: 30px;
+        dt{
+          font-size: 18px;
+          width: 215px;
+          line-height: 36px;
+          float: left;
+          text-align: right;
+        }
+        dd{
+          width: 370px;
+          float: left;
+          input{
+            .size(205px,30px);
+            border: 1px solid #ccc;
+            line-height: 30px;
+          }
+          .msg-error{
+            color: #c00;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .action{
+      text-align: center;
+      margin-top: 40px;
+      .action-btn{
+        .regular-button(160px,40px,#000,#fff);
+        .inline-block();
+        font-size: 18px;
+      }
+    }
+  }
+}

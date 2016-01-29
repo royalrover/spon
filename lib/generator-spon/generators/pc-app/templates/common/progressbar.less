@@ -1,0 +1,77 @@
+/*
+ * widget - progressbar
+ * @author xiaochen@showjoy.com
+ */
+@import '../mixins';
+.widget-progressbar{
+  @progressbar-sprite: 'http://cdn1.showjoy.com/images/b6/b66088b60a714de487490dc2ff18a35f.png';
+  .step{
+    width: 24px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    font-family: Impact;
+    text-align: center;
+    font-size: 14px;
+    color: #dadada;
+    background: url(@progressbar-sprite) no-repeat;
+    background-position: 0 -30px*5;
+    position: relative;
+    &.first{
+      width: 27px;
+      height: 30px;
+      background-position: 0 -30px*0;
+      &.complete{
+        background-position: 0 -30px*0;
+      }
+      &.current{
+        background-position:  0 -246px;
+      }
+      .step-no{
+        padding-left: 3px;
+      }
+    }
+    &.last{
+      width: 27px;
+      height: 30px;
+      background-position: 0 -30px*2;
+      &.complete{
+        background-position: 0 -30px*1;
+      }
+      .step-no{
+        padding-right: 2px;
+      }
+    }
+    &.complete{
+      background-position: 0 -30px*3;
+      .step-no{
+        display: none;
+      }
+    }
+    &.current{
+      background-position: 0 -30px*6;
+      color: #fff;
+    }
+
+    .step-name{
+      width: 70px;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+      position: absolute;
+      bottom: -30px;
+      left: -20px;
+    }
+  }
+  .connect{
+    width: 185px;
+    height: 18px;
+    float: left;
+    margin-top: 6px;
+    background: url(@progressbar-sprite) repeat-x;
+    background-position: 0 -30px*7-18;
+    &.complete{
+      background-position: 0 -30px*7;
+    }
+  }
+}

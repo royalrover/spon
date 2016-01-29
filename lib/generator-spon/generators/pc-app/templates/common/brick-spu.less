@@ -1,0 +1,62 @@
+/*
+ * widget - brick - spu
+ * @author ben@yunjee.com
+ */
+
+@import "brick";
+
+.widget-brick-spu:extend(.widget-brick all){
+  .brick-cover{
+    height: 260px;
+    .brick-cover-wrap{
+      height: 220px;
+      .brand{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      .oversea{
+        width: 47px;
+        height: 47px;
+        background: url(http://cdn1.showjoy.com/images/ca/cad233b386894619b75001bfb5da3d59.png);
+        position: absolute;
+        right: 10px;
+        top: 15px;
+      }
+    }
+    .brick-pic{
+      position: relative;
+      .size(100%, 220px);
+      .discount{
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        .size(49px, 50px);
+        background: url("http://cdn1.showjoy.com/assets/img/4.0/icon/discount-bg.png") no-repeat 0 0;
+        .number{
+          color: #fff;
+          font-size: 16px;
+          position: absolute;
+          right: 20px;
+          bottom: 12px;
+        }
+      }
+      .oversea{
+        width: 47px;
+        height: 47px;
+        background: url(http://cdn1.showjoy.com/images/ca/cad233b386894619b75001bfb5da3d59.png);
+        position: absolute;
+        right: 10px;
+        top: 15px;
+      }
+      img{
+        margin-left: 10px;
+      }
+    }
+    .brick-title{
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+}
