@@ -1,0 +1,27 @@
+{
+  "name": "@ali/home",
+  "version": "0.1.0",
+  "description": "this is test module",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "xxx"
+  },
+  "keywords": [
+    "jade",
+    "middleware",
+    "express"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "author": "wenlong <wenlong@taobao.com>",
+  "license": "ISC",
+  "dependencies": {
+    "jade": "~1.9.2",
+    "lodash": "~3.6.0"
+  }
+}
