@@ -1,6 +1,6 @@
 {
   "name": "spon",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "showjoy移动前端模块化解决方案",
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "commander": "^2.8.1",
     "css-loader": "^0.23.0",
     "del": "^2.2.0",
+    "esprima": "^2.7.2",
     "easy-table": "~0.3.0",
     "glob": "~3.2.8",
     "gulp": "^3.9.0",
