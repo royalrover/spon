@@ -1,0 +1,39 @@
+/*
+ * UI - msg
+ * @author ben@ueopro.com
+ */
+
+.ui-msg{
+  line-height: 30px;
+  .ui-msg-text{
+    vertical-align: middle;
+    a{
+      text-decoration: underline;
+    }
+  }
+  .ui-msg-icon{
+    background: transparent url("http://file.showjoy.com/images/6f/6fe63baf88a6487d8c01399ba140bcbf.png") no-repeat 0 0;
+    .square(30px);
+    .inline-block();
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+
+  .ui-msg-icon-ok{
+    .ui-msg-icon();
+    background-position: 0 0;
+  }
+  .ui-msg-icon-error{
+    .ui-msg-icon();
+    background-position: 0 -50px;
+  }
+  .ui-msg-icon-info{
+    .ui-msg-icon();
+    background-position: 0 -96px;
+  }
+
+  .ui-msg-text-list{
+    .inline-block();
+    vertical-align: middle;
+  }
+}

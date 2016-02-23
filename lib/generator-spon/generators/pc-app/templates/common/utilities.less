@@ -1,0 +1,64 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+.clearfix {
+  .clearfix();
+}
+.center-block {
+  .center-block();
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+.hidden{
+  display: none!important;
+}
+.transparent{
+  .opacity(0);
+}
+.invisible {
+  visibility: hidden;
+}
+.highlight{
+  color: @pink;
+}
+.lowlight{
+  color: @gray-light;
+}
+
+// 竖排文字
+.vtext{
+  width:0.9em;
+  text-align:center;
+  display: block;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+// 90度翻转文字
+.rtext{
+  .rotate(90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); 
+}
+
+// 垂直居中元素 */
+.vbox{
+  position: relative;
+  display: table;
+  .vbox-outer{
+    display:table-cell;
+    vertical-align: middle;
+    *display: block;
+    *position:absolute;
+      *top: 50%;
+      .vbox-inner{
+        *position:relative;
+        *top:-50%;
+      }
+  }
+}
