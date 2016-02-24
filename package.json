@@ -1,6 +1,6 @@
 {
   "name": "spon",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "showjoy移动前端模块化解决方案",
   "repository": {
     "type": "git",
@@ -50,7 +50,7 @@
     "my-gulp-webpack": "^0.0.1",
     "my-webpack": "^0.0.1",
     "npmlog": "0.0.6",
-    "postcss": "^5.0.14",
+    "spon-postcss": "^1.0.1",
     "q": "1.4.1",
     "request": "^2.67.0",
     "shelljs": "^0.5.3",
