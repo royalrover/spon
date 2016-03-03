@@ -12,6 +12,9 @@ var log = console.log;
 var home = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
 var showjoyBase = path.join(home,'.spon');
 var pluginsBase = path.join(showjoyBase,'plugins');
+if(!fs.existsSync(showjoyBase)){
+    fs.mkdirSync(showjoyBase);
+}
 if(!fs.existsSync(pluginsBase)){
     fs.mkdirSync(pluginsBase);
 }
