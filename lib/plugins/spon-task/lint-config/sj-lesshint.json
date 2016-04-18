@@ -1,0 +1,182 @@
+{
+    "fileExtensions": [".less"],
+
+    "excludedFiles": [],
+
+    "attributeQuotes": {
+        "enabled": true,
+        "style": "single"
+    },
+
+    "borderZero": {
+        "enabled": true,
+        "style": "zero"
+    },
+
+    "comment": {
+        "allowed": "^!",
+        "enabled": false
+    },
+
+    "decimalZero": {
+        "enabled": true,
+        "style": "leading"
+    },
+
+    "depthLevel": {
+        "enabled": false,
+        "depth": 3
+    },
+
+    "duplicateProperty": {
+        "enabled": true,
+        "exclude": []
+    },
+
+    "emptyRule": {
+        "enabled": true
+    },
+
+    "finalNewline": {
+        "enabled": false
+    },
+
+    "hexLength": {
+        "enabled": false,
+        "style": "long"
+    },
+
+    "hexNotation": {
+        "enabled": true,
+        "style": "lowercase"
+    },
+
+    "hexValidation": {
+        "enabled": true
+    },
+
+    "idSelector": {
+        "enabled": true,
+        "exclude": []
+    },
+
+    "importantRule": {
+        "enabled": true
+    },
+
+    "importPath": {
+        "enabled": false,
+        "exclude": [],
+        "filenameExtension": false,
+        "leadingUnderscore": false
+    },
+
+    "propertyOrdering": {
+        "enabled": false,
+        "style": "alpha"
+    },
+
+    "propertyUnits": {
+        "enabled": true,
+        "valid": [
+            "ch", "em", "ex", "rem",                 // Font-relative lengths
+            "cm", "in", "mm", "pc", "pt", "px", "q", // Absolute lengths
+            "vh", "vw", "vmin", "vmax",              // Viewport-percentage lengths
+            "deg", "grad", "rad", "turn",            // Angle
+            "ms", "s",                               // Duration
+            "Hz", "kHz",                             // Frequency
+            "dpi", "dpcm", "dppx",                   // Resolution
+            "%"                                      // Other
+        ],
+        "properties": {}
+    },
+
+    "qualifyingElement": {
+        "enabled": false,
+        "allowWithId": false,
+        "allowWithClass": false,
+        "allowWithAttribute": false
+    },
+
+    "selectorNaming": {
+        "enabled": false,
+        "disallowUppercase": true,
+        "disallowUnderscore": true
+    },
+
+    "singleLinePerProperty": {
+        "enabled": true
+    },
+
+    "singleLinePerSelector": {
+        "enabled": true,
+        "style": "none"
+    },
+
+    "spaceAfterPropertyColon": {
+        "enabled": false,
+        "style": "one_space"
+    },
+
+    "spaceAfterPropertyName": {
+        "enabled": true,
+        "style": "no_space"
+    },
+
+    "spaceAfterPropertyValue": {
+        "enabled": true,
+        "style": "no_space"
+    },
+
+    "spaceAroundComma": {
+        "enabled": false,
+        "style": "after"
+    },
+
+    "spaceAroundOperator": {
+      "enabled": true,
+      "style": "both"
+    },
+
+    "spaceBeforeBrace": {
+        "enabled": false,
+        "style": "one_space"
+    },
+
+    "spaceBeforeComma": {
+        "enabled": true,
+        "style": "no_space"
+    },
+
+    "spaceBetweenParens": {
+        "enabled": true,
+        "style": "no_space"
+    },
+
+    "stringQuotes": {
+        "enabled": false,
+        "style": "single"
+    },
+
+    "trailingSemicolon": {
+        "enabled": true
+    },
+
+    "trailingWhitespace": {
+        "enabled": false
+    },
+
+    "urlFormat": {
+        "enabled": false,
+        "style": "relative"
+    },
+
+    "urlQuotes": {
+        "enabled": false
+    },
+
+    "zeroUnit": {
+        "enabled": false,
+        "style": "keep_unit"
+    }
+}
