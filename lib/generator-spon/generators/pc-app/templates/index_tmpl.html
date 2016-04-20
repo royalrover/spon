@@ -35,19 +35,6 @@
     }
     var jsonProducts = {'': []};
     function render(template, data) {};
-    $(function() {
-      seajs.use('artTemplate', function(tpl) {
-        $('[data-module-name]').each(function(index, item) {
-          var $item = $(item);
-          var moduleName = $item.attr('data-module-name');
-          getJsonProducts(moduleName, function(json) {
-            var html = tpl.render($item.find('script').attr('id'), json);
-            $item.find('script').parent().append(html);
-          });
-        });
-        render && render(tpl, jsonProducts);
-      });
-    });
   </script>
 
   <!-- local css files -->
