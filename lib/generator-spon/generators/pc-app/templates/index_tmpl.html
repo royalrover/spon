@@ -15,27 +15,6 @@
   <link href="http://cdn1.showjoy.com/assets/css/portal/20160301/global.css?t=20141112" rel="stylesheet">
   <!--  公共部分Js  -->
   <script src="http://cdn1.showjoy.com/assets/sea-modules/core/jquery/1.7.2/jquery.js" ></script>
-  
-  <script type="text/javascript">
-    function getJsonProducts(moduleName, callback) {
-      var activityId = location.href.split('/').pop().split('.')[0];
-      var url = 'http://market.showjoy.com/api/ctopic/';
-      url = url + activityId + '.html';
-      $.ajax({
-        url: url,
-        type: 'GET',
-        dataType: 'jsonp',
-        data: {
-          'moduleName': '' + moduleName + ''
-        },
-        success: function(json) {
-          callback && callback(json);
-        }
-      });
-    }
-    var jsonProducts = {'': []};
-    function render(template, data) {};
-  </script>
 
   <!-- local css files -->
   <link rel="stylesheet" href="./<%= pages %>.css"/>
