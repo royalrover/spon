@@ -229,3 +229,6 @@ $('main').html(tmpl({
 - v0.2.7
   1、添加js，less文件代码规范检查
   2、更新新添加page时的初始html文件
+
+- v0.2.8
+  修改 eslint.json 配置文件,放宽规则限制
