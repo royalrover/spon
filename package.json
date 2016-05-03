@@ -1,6 +1,6 @@
 {
   "name": "spon",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "showjoy移动前端模块化解决方案",
   "repository": {
     "type": "git",
@@ -59,7 +59,11 @@
     "yeoman-assert": "^2.0.0",
     "yeoman-environment": "^1.3.0",
     "yeoman-generator": "^0.21.1",
-    "yo": "^1.5.0"
+    "yo": "^1.5.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-lesshint": "^1.1.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.2.3"
   },
   "devDependencies": {
     "should": "^8.2.1"

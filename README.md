@@ -232,3 +232,6 @@ $('main').html(tmpl({
 
 - v0.2.8
   修改 eslint.json 配置文件,放宽规则限制
+
+- v0.2.9
+  添加 eslint的依赖
