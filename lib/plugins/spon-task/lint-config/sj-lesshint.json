@@ -9,7 +9,7 @@
     },
 
     "borderZero": {
-        "enabled": true,
+        "enabled": false,
         "style": "zero"
     },
 
@@ -19,7 +19,7 @@
     },
 
     "decimalZero": {
-        "enabled": true,
+        "enabled": false,
         "style": "leading"
     },
 
@@ -47,12 +47,12 @@
     },
 
     "hexNotation": {
-        "enabled": true,
+        "enabled": false,
         "style": "lowercase"
     },
 
     "hexValidation": {
-        "enabled": true
+        "enabled": false
     },
 
     "idSelector": {
@@ -77,7 +77,7 @@
     },
 
     "propertyUnits": {
-        "enabled": true,
+        "enabled": false,
         "valid": [
             "ch", "em", "ex", "rem",                 // Font-relative lengths
             "cm", "in", "mm", "pc", "pt", "px", "q", // Absolute lengths
@@ -134,7 +134,7 @@
     },
 
     "spaceAroundOperator": {
-      "enabled": true,
+      "enabled": false,
       "style": "both"
     },
 

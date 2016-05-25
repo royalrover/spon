@@ -1,6 +1,6 @@
 {
   "name": "spon",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "showjoy移动前端模块化解决方案",
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "dependencies": {
     "async": "^1.5.0",
     "bluebird": "~1.1.0",
+    "colors": "^1.1.2",
     "chalk": "^1.1.1",
     "cli-color": "^1.0.0",
     "commander": "^2.8.1",
@@ -49,6 +50,8 @@
     "mkdirp": "~0.3.5",
     "my-gulp-webpack": "^0.0.1",
     "my-webpack": "^0.0.1",
+    "my-commitizen": "^0.0.3",
+    "sj-conventional-changelog": "^0.0.3",
     "npmlog": "0.0.6",
     "spon-postcss": "^1.0.1",
     "q": "1.4.1",

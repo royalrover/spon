@@ -235,3 +235,11 @@ $('main').html(tmpl({
 
 - v0.2.9
   添加 eslint的依赖
+
+- v0.2.10
+  lint规则放宽
+  sourceMap链接错误解决
+  spon commit（cmt）集成，规范化提交内容
+  spon性能优化，采用懒加载
+  tty输出信息优化
+
