@@ -80,8 +80,8 @@
     "space-before-blocks": 0,
     "vars-on-top": 0,
     "use-isnan": 2,
-    "no-undef": 1,"no-undef": 1,
-
+    "no-undef": 1,
+    "no-undef": 1
   },
   "globals": {
     "jQuery": true,
