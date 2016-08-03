@@ -267,3 +267,7 @@ $('main').html(tmpl({
 - v0.2.16
   rem插件重新实现，放弃diff算法，直接正则匹配
 
+- v0.2.17
+  删除初始化安装操作
+  修复sj-conventional-changelog包
+
