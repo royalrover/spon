@@ -271,3 +271,6 @@ $('main').html(tmpl({
   删除初始化安装操作
   修复sj-conventional-changelog包
 
+- v0.2.18
+  插件系统兼容npm@3.x.x
+
