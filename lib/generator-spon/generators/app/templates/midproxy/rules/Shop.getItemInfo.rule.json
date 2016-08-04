@@ -1,0 +1,67 @@
+{
+  "request": {
+    "keywords": "",
+    "catId|100000-999999": 1
+  },
+  "hotload": 1,
+  "response": {
+    "count|0-1": 0,
+    "data": {
+      "shopId|0-100": 1,
+      "item": {
+        "image": "http://cdn1.showjoy.com/images/8b/8bb98feebb0141baad0e338b973d4ab1.png.400x400.png",
+        "brand": {
+          "image": "http://file.showjoy.com/images/e4/e4af9857bcec4ad8908e76c8670c16d3.png.120x120.png",
+          "enName": "Anna Sui",
+          "zhName": "安娜苏"
+        }
+      },
+      "recommend": {
+        "releventItems": [
+          {
+            "id": "/sku/19581.html",
+            "image": "http://cdn1.showjoy.com/images/cb/cbcb070f067e440ea9c9e794457f0a07.png.250x250.png",
+            "name": "雅诗兰黛 6件套",
+            "price": "265.00",
+            "discount": "2.70"
+          },
+          {
+            "id": "/sku/100374.html",
+            "image": "http://cdn1.showjoy.com/images/39/39acb2cdb27c440eb81f072d18009419.png.250x250.png",
+            "name": "SNP 燕窝面膜  (深层补水保湿美白)125g",
+            "price": "56.00",
+            "discount": "5.70"
+          },
+          {
+            "id": "/sku/22963.html",
+            "image": "http://cdn1.showjoy.com/images/f9/f92a540190754bc7a5714f52eec4cd02.png.250x250.png",
+            "name": "兰蔻 新精华肌底面膜16ml",
+            "price": "563.00",
+            "discount": "55.70"
+          },
+          {
+            "id": "/sku/22061.html",
+            "image": "http://cdn1.showjoy.com/images/a6/a677228cd8914b088153fadb98fb04e5.png.250x250.png",
+            "name": ">魔法森林 魔法森林鸡蛋系列",
+            "price": "563.00",
+            "discount": "5.70"
+          }
+
+        ]
+      },
+      "shopName": "米奇的酱油铺",
+      "userImage": "http://file.showjoy.com/images/29/294143eb10394c959d304dc5d4890b52.jpg"
+    },
+    "isRedirect": 0,
+    "isSuccess": 1,
+    "login": 0
+  },
+  "responseError": {
+    "count": 0,
+    "data": "",
+    "isRedirect": 0,
+    "isSuccess": 0,
+    "login": 0,
+    "msg": "response error..."
+  }
+}
