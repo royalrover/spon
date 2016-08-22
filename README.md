@@ -274,3 +274,6 @@ $('main').html(tmpl({
 - v0.2.18
   插件系统兼容npm@3.x.x
 
+- v0.2.19
+  集成MidProxy工程套件、React工程套件和JOYUI套件
+
