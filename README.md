@@ -277,3 +277,10 @@ $('main').html(tmpl({
 - v0.2.19
   集成MidProxy工程套件、React工程套件和JOYUI套件
 
+- v0.2.20
+  添加pack，join功能
+
+- v0.2.21
+  修复webpack配置文件加载依赖路径出错
+  优化JOYUI开发流程
+  错误日志后台化，记录至log.showjoy.net
