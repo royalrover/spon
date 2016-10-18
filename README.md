@@ -284,3 +284,6 @@ $('main').html(tmpl({
   修复webpack配置文件加载依赖路径出错
   优化JOYUI开发流程
   错误日志后台化，记录至log.showjoy.net
+
+- v0.2.22
+  修复npm3.x.x下插件无法更新(升级)
