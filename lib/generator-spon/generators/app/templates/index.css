@@ -1,4 +1,10 @@
-/* generator by spon */
+/*
+  @remSwitch: true;
+  @rootValue: 75;
+  @unitPrecision: 4;
+  @blackList: ["font","font-size"];
+  @minPixelValue: 2;
+*/
 
 /* 导入全局方法 */
 @import "../../mixins/mixins.less";
