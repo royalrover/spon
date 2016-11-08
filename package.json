@@ -1,17 +1,18 @@
 {
   "name": "spon",
-  "version": "0.2.24",
+  "version": "0.3.1",
   "description": "showjoy移动前端模块化解决方案",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/royalrover/spon.git"
+    "url": "git@git.showjoy.net:yuxiu/spon.git",
+    "type": "git"
   },
   "main": "index.js",
   "bin": {
     "spon": "bin/spon.js"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/_mocha"
+    "test": "./node_modules/mocha/bin/_mocha",
+    "postpublish": "node ./bin/installWithSourceCode.js"
   },
   "keywords": [
     "spon",
@@ -50,9 +51,9 @@
     "gulp-util": "^3.0.7",
     "gulpp-webpack": "*",
     "imports-loader": "^0.6.5",
-    "jshint": "^2.8.0",
     "joyui-loader": "*",
     "joyuiTmpl-loader": "*",
+    "jshint": "^2.8.0",
     "less-loader": "^2.2.2",
     "lodash": "2.4.1",
     "mkdirp": "~0.3.5",

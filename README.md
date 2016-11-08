@@ -294,3 +294,6 @@ $('main').html(tmpl({
 
 - v0.2.24
   修改rem转换的配置方式（在less文件中，放弃使用rem.json文件）
+
+- v0.3.1
+  增加yarn管理依赖
