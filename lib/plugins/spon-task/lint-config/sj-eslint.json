@@ -81,7 +81,8 @@
     "vars-on-top": 0,
     "use-isnan": 2,
     "no-undef": 1,
-    "no-undef": 1
+    "no-undef": 1,
+    "no-new": 0
   },
   "globals": {
     "jQuery": true,
