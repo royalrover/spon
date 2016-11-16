@@ -1,0 +1,89 @@
+<div id="content" class="{{if shopCommissionDetail.totalCommission <= 0}}  total-commission-null {{/if}}">
+    <section class="sales-status">
+        <div class="total-sales">
+          <p class="total-money">{{execJS: Number(shopCommissionDetail.totalCommission).toFixed(2)|echo}}</p>
+          <p class="desc">累计收益(元)</p>
+        </div>
+        <div class="total-sales-info">
+          <a href="/shop/commission/recruit" class="recruit-income {{if shopCommissionDetail.recruitCommission <= 0}}  no-income {{/if}}">
+            <p class="money-box">
+              <span class="money">{{execJS: Number(shopCommissionDetail.recruitCommission).toFixed(2)|echo}}</span>
+            </p>
+            <p class="title">纳新收益(元)</p>
+          </a>
+          <a href="/shop/commission/order" class="sale-income {{if shopCommissionDetail.orderCommission <= 0}} no-income {{/if}}">
+            <p class="money-box">
+              <span class="money">{{execJS: Number(shopCommissionDetail.orderCommission).toFixed(2)|echo}}</span>
+            </p>
+            <p class="title">销售收益(元)</p>
+          </a>
+          <a href="/shop/family" class="family-income  no-income ">
+            <p class="money-box">
+              <span class="money">0</span>
+            </p>
+            <p class="title">家族成员(人)</p>
+          </a>
+        </div>
+        <p class="income-rule-button j_IncomeRuleButton">
+          收益规则说明
+        </p>
+        <a href="/shop/commission/commissionDetail" class="income-detail-button">收入明细</a>
+      </section>
+
+  	  <!-- 提现 -->
+      <section class="withdraw">
+        <div class="withdraw-money">
+          <div class="can-withdraw {{if shopCommissionDetail.currentWithdraw <= 0}} no-income {{/if}}">
+            <p class="price">
+              <span class="num">{{execJS: Number(shopCommissionDetail.currentWithdraw).toFixed(2)|echo}}</span>
+            </p>
+            <p class="title">可提现金额（元）</p>
+          </div>
+          {{if shopCommissionDetail.currentWithdraw > 0}}
+          <a href="/shop/commission/withdraw/home" class="withdraw-button">
+            <p class="title">点击提现</p>
+          </a>
+          {{else if shopCommissionDetail.currentWithdraw > 0 && shopCommissionDetail.totalCommission > 0 && shopCommissionDetail.totalCommission != shopCommissionDetail.freezeCommission}}
+          <a href="/shop/commission/withdraw/list" class="withdraw-button">
+            <p class="title">提取记录</p>
+          </a>
+          {{/if}}
+        </div>
+        {{if shopCommissionDetail.freezeCommission > 0}}
+        <div class="freeze">
+          <p class="desc">您还有{{shopCommissionDetail.freezeCommission}}元处于冻结状态，用户确认收货后方可提现。</p>
+        </div>
+        {{/if}}
+      </section>
+
+      <!-- 邀请按钮 -->
+      <section class="invite-box">
+        <a class="invite-button" href="/invitation{{if shopId }}?shopId={{shopId}}{{/if}}">邀请好友开店</a>
+      </section>
+
+      <!-- 浮层 收益规则说明 -->
+      <section class="mask-rule j_MaskRule show">
+        <p class="title">收益规则说明：</p>
+        <p class="desc">
+	        1、每成功邀请一位好友开店，可获得50元现金＋10元无门槛优惠
+			（如果您是班主任，将额外获得150元家族纳新奖励；
+	  		如果您是系主任，将额外获得150元家族纳新奖励；
+			如果您是分院长，将额外获得6.5元家族纳新奖励）
+		</p>
+		<p class="desc">2、店铺每售出一笔商品，可获得商品售价10%—35%得销售奖励</p>
+		<p class="desc">3、直接下级成员每邀请一位好友开店，你可获得10元现金
+			（如果您是班主任，将额外获得150元家族纳新奖励；
+			如果您是系主任，下级中若无班主任，您将额外获得150元家族纳新奖励，下级中若有班主任，您将额外获得50元家族纳新奖励；
+			如果您是分院长，将额外获得6.5／50/150元家族纳新奖励）
+		</p>
+		<p class="desc">4、直接下级成员每售出一笔订单，你可获得该成员佣金的10%
+			（如果您是班主任，将额外获得家族成员销售订单佣金的16%；
+			如果您是系主任，将额外获得家族成员销售订单佣金的5%；
+			如果您是分院长，将额外获得家族成员销售订单佣金的6%）
+		</p>
+
+		<p class="desc">5、当班主任／系主任／分院长的下级成长为同样的身份时（达人店长的下级成长为更高的身份时），下级将不再贡献家族纳新和销售奖励，如果是直接下级会依然贡献纳新和销售收益
+		</p>
+        <div class="close-icon"></div>
+      </section>
+    </div>

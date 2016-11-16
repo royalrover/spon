@@ -1,0 +1,15 @@
+
+{
+  "type": "MidProxy",
+  "name": "xxxxx",
+  "info": "xxxxx",
+  "views": [],
+  "cache": [
+    {
+      "k": "f2e:shop:commissionRender",
+      "v": "commission",
+      "dirname": "mobile/shop"
+    }
+  ],
+"hotload": 1
+}
