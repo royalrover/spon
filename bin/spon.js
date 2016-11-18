@@ -3,21 +3,15 @@ var path = require('path');
 var fs = require('fs');
 var cli = require('commander');
 var utils = require('../lib/utils');
-var chalk = require('chalk');
-var npmlog = require('npmlog');
-var _ = require('lodash');
 
-var log = console.log;
-
-var home = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
-var showjoyBase = path.join(home,'.spon');
-var pluginsBase = path.join(showjoyBase,'plugins');
-if(!fs.existsSync(showjoyBase)){
-    fs.mkdirSync(showjoyBase);
+// 设置NODE_PATH
+if(!process.env.NODE_PATH) {
+    process.env.NODE_PATH = path.join(utils.getNPMGlobalPath());
+}else{
+    process.env.NODE_PATH += ';' + path.join(utils.getNPMGlobalPath());
 }
-if(!fs.existsSync(pluginsBase)){
-    fs.mkdirSync(pluginsBase);
-}
+// 重新设置全局的依赖加载路径
+module.constructor._initPaths();
 
 var spon = require('../lib/spon-manager')(cli);
 
