@@ -31,7 +31,7 @@
 21 silly publish   description: 'showjoy移动前端模块化解决方案',
 21 silly publish   repository: { url: 'git@git.showjoy.net:yuxiu/spon.git', type: 'git' },
 21 silly publish   main: 'index.js',
-21 silly publish   bin: { spon: 'bin/spon.js' },
+21 silly publish   bin: { spon:'bin/spon.js' },
 21 silly publish   scripts:
 21 silly publish    { test: './node_modules/mocha/bin/_mocha',
 21 silly publish      postpublish: 'node ./bin/installWithSourceCode.js' },

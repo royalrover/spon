@@ -45,11 +45,11 @@ shelljs.exec('tar --exclude=.DS_Store --exclude=.git --exclude=.gitignore --excl
 
       res.on('end',function(err){
         if(err){
-          log.error('spon: ','哎呀，上传tar包失败');
+          log.error('spon:','哎呀，上传tar包失败');
           return;
         }
 
-        log.info('spon: ','上传tar包成功');
+        log.info('spon:','上传tar包成功');
         shelljs.exec('rm -rf ' + process.cwd() + '/spon.*');
       });
 

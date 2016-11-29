@@ -8,4 +8,4 @@ var webpackpath = '/Users/showjoy/.spon/mobi/webpack.config.js';
 
 shelljs.exec('sudo cp '+ currentWebpack + ' ' +webpackpath);
 //shelljs.exec('sudo cp -r lib /usr/local/lib/node_modules/spon/');
-shelljs.exec('sudo cp -r bin lib ~/.yarn-cache/.global/node_modules/spon');
+shelljs.exec('sudo cp -r bin lib ~/.config/yarn/global/node_modules/spon');
