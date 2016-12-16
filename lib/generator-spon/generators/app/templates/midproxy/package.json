@@ -6,8 +6,8 @@
   "views": [],
   "cache": [
     {
-      "k": "f2e:shop:commissionRender",
-      "v": "commission",
+      "k": "f2e:shop:demo",
+      "v": "demo",
       "dirname": "mobile/shop"
     }
   ],

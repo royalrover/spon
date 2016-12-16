@@ -1,0 +1,22 @@
+{
+  "title": "MidProxy接口配置",
+  "version": "0.0.1",
+  "engine": "mockjs",
+  "rulebase": "./rules/",
+  "status": "online",
+  "hotload": 1,
+  "interfaces": [ {
+      "name": "店铺收益页",
+      "id": "******.******",
+      "method": "get",
+      "urls": {
+        "dev": "******",
+        "test": "******",
+        "preview": "******",
+        "online": "******"
+      },
+      "dataType": "json | text | ******",
+      "encoding": "utf8",
+      "isCookieNeeded": true
+    }]
+}
